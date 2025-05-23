@@ -4,7 +4,7 @@ import "./globals.css";
 
 const font = Epilogue({
   subsets: ["vietnamese", "latin"],
-  weight: ["500", "700", "600"],
+  weight: ["500", "700", "600", "400"],
 });
 
 export const metadata: Metadata = {
@@ -18,8 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${font.className} antialiased`}>{children}</body>
+    <html lang="vi">
+      <body
+        className={`${font.className} antialiased h-[8000px] text-[#1C252E] bg-[#F4F6F8]`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
