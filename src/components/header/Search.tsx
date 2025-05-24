@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Search = () => {
   return (
-    <label className="flex items-center w-[47%] h-[64px] border-[2px] border-[#0373F3] rounded-full pr-[8px] py-[8px] pl-[20px]">
+    <label className="flex items-center w-[42%] h-[64px] border-[2px] border-[#0373F3] rounded-full pr-[8px] py-[8px] pl-[20px]">
       <input
         type="text"
         placeholder="Tìm sản phẩm"

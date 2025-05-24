@@ -117,6 +117,15 @@
     box-shadow: 0px 12px 24px -4px rgba(145, 158, 171, 0.12),
       0px 0px 2px 0px rgba(145, 158, 171, 0.2);
   }
+
+  .shadow-card-hover {
+    box-shadow: 0px 8px 16px rgba(3, 117, 243, 0.16);
+  }
+
+  .shadow-service {
+    box-shadow: 0 8px 16px 0 rgba(145, 158, 171, 0.16);
+  }
+
   .card-title-clip {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -158,10 +167,5 @@
         #3281ff 345deg 360deg
       );
     background-blend-mode: screen; /* làm sáng phần giao nhau */
-  }
-
-  .hero-text {
-    text-shadow: -2px -2px 0 #0047ab, 2px -2px 0 #0047ab, -2px 2px 0 #0047ab,
-      2px 2px 0 #0047ab;
   }
 }

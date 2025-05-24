@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import { Product } from "@/components/Product";
 
-const products = [
+export const products = [
   {
     id: 1,
     imageUrl: "/products/01.png",

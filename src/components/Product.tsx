@@ -8,8 +8,8 @@ type Props = {
 
 export const Product: React.FC<Props> = ({ imageUrl, title }) => {
   return (
-    <div className="bg-white rounded-[8px] shadow-card">
-      <div className="p-[8px]">
+    <div className="bg-white rounded-[8px] shadow-card hover:shadow-card-hover">
+      <Link href="#!" className="p-[8px]">
         <Image
           className="rounded-[8px] object-cover"
           alt="cate-product"
@@ -17,7 +17,7 @@ export const Product: React.FC<Props> = ({ imageUrl, title }) => {
           width={237}
           height={237}
         />
-      </div>
+      </Link>
 
       <div className="px-[12px] pt-[16px] pb-[20px]">
         <Image
