@@ -1,5 +1,5 @@
-import { CallToActions } from "@/components/CallToActions";
-import { Search } from "@/components/Search";
+import { CallToActions } from "@/components/header/CallToActions";
+import { Search } from "@/components/header/Search";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

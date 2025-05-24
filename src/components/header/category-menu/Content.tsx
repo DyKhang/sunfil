@@ -62,8 +62,8 @@ export const Content: React.FC<Props> = ({ items }) => {
         <div className="flex items-center gap-[13px] font-semibold text-[#0373F3] cursor-pointer">
           <span>Xem tất cả</span>
           <Image
-            alt="next-arrow"
-            src="/icons/next-arrow.svg"
+            alt="arrow-next"
+            src="/icons/arrow-next.svg"
             width={10}
             height={10}
           />

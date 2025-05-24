@@ -102,7 +102,7 @@ export const Menu = () => {
   const [activeContent, setActiveContent] = useState(0);
 
   return (
-    <div className="pt-[16px] absolute transition-all duration-500 opacity-0 invisible group-hover:visible group-hover:opacity-100 top-[100%]">
+    <div className="pt-[16px] z-[1] absolute transition-all duration-300 opacity-0 invisible group-hover:visible group-hover:opacity-100 top-[100%]">
       <section className="bg-[#f0f3f5] flex rounded-b-[12px] overflow-hidden">
         <div className="w-[260px] bg-white pb-[54px]">
           {categories.map((cate, index) => (
