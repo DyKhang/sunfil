@@ -123,4 +123,45 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .burst-background {
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.2) 0%,
+        transparent 60%
+      ),
+      conic-gradient(
+        from 0deg,
+        #315fd4 0deg 15deg,
+        #3281ff 15deg 30deg,
+        #315fd4 30deg 45deg,
+        #3281ff 45deg 60deg,
+        #315fd4 60deg 75deg,
+        #3281ff 75deg 90deg,
+        #315fd4 90deg 105deg,
+        #3281ff 105deg 120deg,
+        #315fd4 120deg 135deg,
+        #3281ff 135deg 150deg,
+        #315fd4 150deg 165deg,
+        #3281ff 165deg 180deg,
+        #315fd4 180deg 195deg,
+        #3281ff 195deg 210deg,
+        #315fd4 210deg 225deg,
+        #3281ff 225deg 240deg,
+        #315fd4 240deg 255deg,
+        #3281ff 255deg 270deg,
+        #315fd4 270deg 285deg,
+        #3281ff 285deg 300deg,
+        #315fd4 300deg 315deg,
+        #3281ff 315deg 330deg,
+        #315fd4 330deg 345deg,
+        #3281ff 345deg 360deg
+      );
+    background-blend-mode: screen; /* làm sáng phần giao nhau */
+  }
+
+  .hero-text {
+    text-shadow: -2px -2px 0 #0047ab, 2px -2px 0 #0047ab, -2px 2px 0 #0047ab,
+      2px 2px 0 #0047ab;
+  }
 }
