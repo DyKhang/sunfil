@@ -1,3 +1,4 @@
+"use client";
 import { useSetSearchParams } from "@/hooks/useSetSearchParams";
 import clsx from "clsx";
 import { useSearchParams } from "next/navigation";

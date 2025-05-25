@@ -1,5 +1,3 @@
-"use client";
-
 import { Tag } from "@/components/main/Tag";
 import React, { Suspense } from "react";
 import {
