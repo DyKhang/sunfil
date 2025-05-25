@@ -9,11 +9,26 @@ import { CheckboxFilter } from "@/components/main/CheckboxFilter";
 import { PriceRadio } from "@/components/main/PriceRadio";
 
 const categories = [
-  "Lọc gió Động cơ - Air Filter",
-  "Lọc Nhiên Liệu - Fuel Filter",
-  "Bộ lọc dầu",
-  "Chưa phân loại",
-  "Khác",
+  {
+    label: "Lọc gió Động cơ - Air Filter",
+    value: "loc-gio-dong-co-air-filter",
+  },
+  {
+    label: "Lọc Nhiên Liệu - Fuel Filter",
+    value: "loc-nhien-lieu-fuel-filter",
+  },
+  {
+    label: "Bộ lọc dầu",
+    value: "bo-loc-dau",
+  },
+  {
+    label: "Chưa phân loại",
+    value: "chua-phan-loai",
+  },
+  {
+    label: "Khác",
+    value: "khac",
+  },
 ];
 
 const priceRanges = [
@@ -33,7 +48,7 @@ const priceRanges = [
 ];
 
 const brands = ["Asakashi", "Bosch", "Huyndai"];
-const yearsOfManufacture = [2021, 2020, 2019, 2018];
+const yearsOfManufacture = ["2021", "2020", "2019", "2018"];
 const origins = ["Đức", "Nhật Bản", "Trung Quốc"];
 
 export const Filter = () => {
@@ -52,7 +67,12 @@ export const Filter = () => {
           <AccordionTrigger>Danh mục sản phẩm</AccordionTrigger>
           <AccordionContent className="mt-[18px] space-y-[14px]">
             {categories.map((cate) => (
-              <CheckboxFilter key={cate} title={cate} />
+              <CheckboxFilter
+                key={cate.label}
+                label={cate.label}
+                value={cate.value}
+                field="category"
+              />
             ))}
           </AccordionContent>
         </AccordionItem>
@@ -84,7 +104,12 @@ export const Filter = () => {
           <AccordionTrigger>Thương hiệu</AccordionTrigger>
           <AccordionContent className="mt-[18px] space-y-[14px]">
             {brands.map((brand) => (
-              <CheckboxFilter key={brand} title={brand} />
+              <CheckboxFilter
+                key={brand}
+                field="brand"
+                label={brand}
+                value={brand}
+              />
             ))}
           </AccordionContent>
         </AccordionItem>
@@ -98,7 +123,12 @@ export const Filter = () => {
           <AccordionTrigger>Năm sản xuất</AccordionTrigger>
           <AccordionContent className="mt-[18px] space-y-[14px]">
             {yearsOfManufacture.map((year) => (
-              <CheckboxFilter key={year} title={year} />
+              <CheckboxFilter
+                key={year}
+                field="year"
+                label={year}
+                value={year}
+              />
             ))}
           </AccordionContent>
         </AccordionItem>
@@ -108,7 +138,12 @@ export const Filter = () => {
           <AccordionTrigger>Xuất xứ</AccordionTrigger>
           <AccordionContent className="mt-[18px] space-y-[14px]">
             {origins.map((origin) => (
-              <CheckboxFilter key={origin} title={origin} />
+              <CheckboxFilter
+                key={origin}
+                label={origin}
+                field="origin"
+                value={origin}
+              />
             ))}
           </AccordionContent>
         </AccordionItem>

@@ -4,9 +4,10 @@ import Link from "next/link";
 type Props = {
   imageUrl: string;
   title: string;
+  price: number;
 };
 
-export const Product: React.FC<Props> = ({ imageUrl, title }) => {
+export const Product: React.FC<Props> = ({ imageUrl, title, price }) => {
   return (
     <div className="bg-white rounded-[8px] shadow-card hover:shadow-card-hover">
       <Link href="#!" className="p-[8px] block">
@@ -32,7 +33,7 @@ export const Product: React.FC<Props> = ({ imageUrl, title }) => {
         </Link>
 
         <p className="text-[20px] font-semibold text-[#B71D18] mt-[16px]">
-          299,000 đ
+          {price.toLocaleString("vi-VN")} đ
         </p>
 
         <div className="flex items-center gap-[10px] mt-[8px]">

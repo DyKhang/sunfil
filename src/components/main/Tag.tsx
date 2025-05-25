@@ -1,7 +1,5 @@
-"use client";
-import { useSetSearchParams } from "@/hooks/useSetSearchParams";
+import { useFilterContext } from "@/hooks/useFilterContext";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 
 type Props = {
   label: string;
@@ -9,19 +7,20 @@ type Props = {
 };
 
 export const Tag: React.FC<Props> = ({ label, value }) => {
-  const searchParams = useSearchParams();
-  const [setSearchParams] = useSetSearchParams("tag");
-  const tag = searchParams.get("tag") || "relevance";
+  const { filter, setFilter } = useFilterContext();
+  const type = filter.type;
 
   return (
     <div
-      onClick={() => setSearchParams(value)}
+      onClick={() => setFilter({ ...filter, type: value })}
       className={`py-[8px] cursor-pointer px-[16px] ${
-        value === tag ? "border-[#0373F3] text-[#0373F3]" : "border-transparent"
+        value === type
+          ? "border-[#0373F3] text-[#0373F3]"
+          : "border-transparent"
       } rounded-[8px] border relative overflow-hidden text-[14px] font-bold bg-white`}
     >
       {label}
-      {tag === value && (
+      {value === type && (
         <>
           <div className="border-[12px] border-transparent border-t-[#0373F3] border-r-[#0373F3] absolute top-0 right-0"></div>
           <Image

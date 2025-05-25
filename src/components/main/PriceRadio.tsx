@@ -1,7 +1,5 @@
-"use client";
-import { useSetSearchParams } from "@/hooks/useSetSearchParams";
+import { useFilterContext } from "@/hooks/useFilterContext";
 import clsx from "clsx";
-import { useSearchParams } from "next/navigation";
 
 type Props = {
   title: string;
@@ -9,16 +7,17 @@ type Props = {
 };
 
 export const PriceRadio: React.FC<Props> = ({ title, value }) => {
-  const searchParams = useSearchParams();
-  const [setSearchParams] = useSetSearchParams("range");
-  const range = searchParams.get("range");
+  const { setFilter, filter } = useFilterContext();
+  const range = filter.range;
 
   return (
     <div
-      onClick={() => setSearchParams(value)}
+      onClick={() =>
+        setFilter({ ...filter, range: value === range ? null : value })
+      }
       className={clsx(
         "h-[36px] rounded-[4px] flex items-center justify-center text-[14px] border border-[#CECCCA] cursor-pointer",
-        { "bg-[#025FCA] border-[#025FCA] text-white": range === value }
+        { "bg-[#025FCA] border-[#025FCA] text-white": value === range }
       )}
     >
       {title}
