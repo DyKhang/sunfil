@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="py-[36px] bg-[#E6F1FF] mt-[40px]">
         <Wrapper className="flex items-center">
           <Image alt="map" src="/icons/map.svg" width={48} height={48} />
-          <span className="text-[24px] font-[500] ml-[16px]">
+          <span className="text-[22px] font-[500] ml-[16px]">
             Xem hệ thống 88 cửa hàng trên toàn quốc
           </span>
 
