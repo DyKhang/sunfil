@@ -9,7 +9,7 @@ type Props = {
 export const Product: React.FC<Props> = ({ imageUrl, title }) => {
   return (
     <div className="bg-white rounded-[8px] shadow-card hover:shadow-card-hover">
-      <Link href="#!" className="p-[8px]">
+      <Link href="#!" className="p-[8px] block">
         <Image
           className="rounded-[8px] object-cover"
           alt="cate-product"

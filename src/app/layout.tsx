@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body
-        className={`${font.className} antialiased h-[8000px] text-[#1C252E] bg-[#F4F6F8]`}
+        className={`${font.className} antialiased text-[#1C252E] bg-[#F4F6F8]`}
       >
         {children}
       </body>
