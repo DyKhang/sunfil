@@ -1,4 +1,3 @@
-"use client";
 import { useSetSearchParams } from "@/hooks/useSetSearchParams";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
